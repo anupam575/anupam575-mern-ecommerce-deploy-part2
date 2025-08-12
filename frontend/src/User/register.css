@@ -1,0 +1,162 @@
+/* ✅ Base Desktop Styles */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.register-form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.avatar-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.avatar-input img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #aaa;
+}
+
+.register-form input[type="file"] {
+  font-size: 14px;
+}
+
+.register-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+}
+
+.register-form button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+
+/* ✅ Responsive Styles */
+
+/* Tablets & Small Laptops */
+@media (max-width: 768px) {
+  .register-container {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .register-form {
+    padding: 25px 20px;
+    max-width: 100%;
+  }
+
+  .register-form h2 {
+    font-size: 20px;
+  }
+
+  .register-form input[type="text"],
+  .register-form input[type="email"],
+  .register-form input[type="password"] {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .register-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .avatar-input img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .register-container {
+    height: auto;
+    padding: 30px 10px;
+  }
+
+  .register-form {
+    padding: 20px 15px;
+    margin-top: 0; /* ❌ Removed margin-top: 300px */
+  }
+
+  .register-form h2 {
+    font-size: 18px;
+  }
+
+  .register-form input[type="text"],
+  .register-form input[type="email"],
+  .register-form input[type="password"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .register-form button {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .avatar-input img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.modal-container .login-container,
+.modal-container .register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 👈 Align content to the top */
+  padding-top: 10px;           /* 👈 Optional: small spacing from top */
+  padding-bottom: 20px;
+  height: 100%;                /* 👈 Ensure it takes full modal height */
+  overflow-y: auto;
+}
+
+.modal-container .login-container .login-form,
+.modal-container .register-container .register-form {
+  margin-top: 0;               /* 👈 Remove unwanted margin */
+  padding-top: 0;              /* 👈 Optional: tighten spacing */
+}
